@@ -2,6 +2,8 @@
 
 sudo apt-get update
 sudo apt-get install zsh -y
+chsh -s /usr/bin/zsh
+zsh
 
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
