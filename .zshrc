@@ -113,6 +113,8 @@ alias ylff="yarn lint:fix && yarn format:fix"
 alias ys="yarn start"
 alias yd="yarn dev"
 alias ysd="yarn start:dev"
+alias yss="yarn start:staging"
+alias ysl="yarn start:local"
 alias yb="yarn build"
 alias yt="yarn test"
 alias ytw="yarn test:watch"
@@ -135,11 +137,14 @@ alias gb="git branch"
 alias gba="git branch -a"
 alias gl="git log --oneline"
 alias glg="git log --oneline --graph --all"
-alias gcp='git commit -p'
 alias gap='git add -p'
+alias gitcm='git commit -m'
 
 #aliases gh
 alias ghpr='gh pr create'
 
 #dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config-dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+export PATH="$PATH:/home/antonipawlak/.protostar/dist/protostar"
+
+export PATH="$PATH:/home/antonipawlak/.foundry/bin"
