@@ -7,7 +7,7 @@ sudo apt-get install zsh -y
 sudo chsh -s $(which zsh)
 
 sudo rm -rf $HOME/ohmyzsh
-git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/
+git clone https://github.com/ohmyzsh/ohmyzsh.git
 
 rm ~/.zshrc
 wget -P $HOME/ https://raw.githubusercontent.com/antooni/dotfiles/master/.zshrc
