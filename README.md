@@ -1,4 +1,4 @@
 # dotfiles
 ```
-sudo sh -c "$(wget -O- https://raw.githubusercontent.com/antooni/dotfiles/master/install.sh)"
+sh -c "$(wget -O- https://raw.githubusercontent.com/antooni/dotfiles/master/install.sh)"
 ```
