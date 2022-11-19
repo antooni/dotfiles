@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # ZSH
+cd ~
 sudo apt-get update
 sudo apt-get install zsh -y
 sudo chsh -s $(which zsh)
