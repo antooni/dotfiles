@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # aliases
-alias mod="code ~/.zshrc"
+alias mod="code ~/.zshrc && xdg-open https://github.com/antooni/dotfiles/blob/master/.zshrc"
 
 # aliases yarn
 alias y="yarn"
