@@ -8,3 +8,6 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/antooni/dotfiles/master/inst
 ```
 sh -c "$(wget -O- https://raw.githubusercontent.com/antooni/dotfiles/master/setup-codespaces-l2beat.sh)"
 ```
+
+### TODO
+- [ ] track .zshrc with git
