@@ -123,6 +123,7 @@ alias ya="yarn add"
 alias yad="yarn add --dev"
 alias yr="yarn remove"
 alias ytc="yarn typecheck"
+alias ysk="yarn storybook"
 
 # aliases git
 alias prune='git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
