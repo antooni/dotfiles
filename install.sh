@@ -11,5 +11,3 @@ git clone https://github.com/ohmyzsh/ohmyzsh.git
 
 rm .zshrc
 wget https://raw.githubusercontent.com/antooni/dotfiles/master/.zshrc
-
-exec zsh
