@@ -159,7 +159,7 @@ source /Users/antooni/.docker/init-zsh.sh || true # Added by Docker Desktop
 export PATH="$PATH:/Users/antooni/.foundry/bin"
 
 # aliases specific for my current MacOS setup
-alias yche="cd /Users/antooni/repos/l2beat && yarn checkout && cd -"
+alias yche="git pull && cd /Users/antooni/repos/l2beat && yarn checkout && cd -"
 alias ybd="cd /Users/antooni/repos/l2beat && yarn build:dependencies && cd -"
 alias mod="code ~/.zshrc && open https://github.com/antooni/dotfiles/blob/master/.zshrc"
 
