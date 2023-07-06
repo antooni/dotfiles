@@ -101,7 +101,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # aliases
-alias mod="code ~/.zshrc && xdg-open https://github.com/antooni/dotfiles/blob/master/.zshrc"
 
 # aliases yarn
 alias y="yarn"
@@ -124,6 +123,7 @@ alias yad="yarn add --dev"
 alias yr="yarn remove"
 alias ytc="yarn typecheck"
 alias ysk="yarn storybook"
+alias ydc="yarn discover"
 
 # aliases git
 alias prune='git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
@@ -153,3 +153,14 @@ export PATH="$PATH:/home/antonipawlak/.foundry/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source /Users/antooni/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+export PATH="$PATH:/Users/antooni/.foundry/bin"
+
+# aliases specific for my current MacOS setup
+alias yche="cd /Users/antooni/repos/l2beat && yarn checkout && cd -"
+alias mod="code ~/.zshrc && open https://github.com/antooni/dotfiles/blob/master/.zshrc"
+
+# aliases specific for Linux
+# alias mod="code ~/.zshrc && xdg-open https://github.com/antooni/dotfiles/blob/master/.zshrc"
