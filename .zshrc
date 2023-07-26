@@ -114,6 +114,7 @@ alias yd="yarn dev"
 alias ysd="yarn start:dev"
 alias yss="yarn start:staging"
 alias ysl="yarn start:local"
+alias ysp="yarn start:production"
 alias yb="yarn build"
 alias yt="yarn test"
 alias ytw="yarn test:watch"
@@ -124,6 +125,7 @@ alias yr="yarn remove"
 alias ytc="yarn typecheck"
 alias ysk="yarn storybook"
 alias ydc="yarn discover"
+alias ybd="yarn build:dependencies"
 
 # aliases git
 alias prune='git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
@@ -162,6 +164,9 @@ export PATH="$PATH:/Users/antooni/.foundry/bin"
 alias yche="git pull && cd /Users/antooni/repos/l2beat && yarn checkout && cd -"
 alias ybd="cd /Users/antooni/repos/l2beat && yarn build:dependencies && cd -"
 alias mod="code ~/.zshrc && open https://github.com/antooni/dotfiles/blob/master/.zshrc"
+alias pgrt="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/reset_test.sql"
+alias pgrl="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/reset_local.sql"
+
 
 # aliases specific for Linux
 # alias mod="code ~/.zshrc && xdg-open https://github.com/antooni/dotfiles/blob/master/.zshrc"
