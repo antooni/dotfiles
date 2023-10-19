@@ -142,6 +142,7 @@ alias gl="git log --oneline"
 alias glg="git log --oneline --graph --all"
 alias gap='git add -p'
 alias gitcm='git commit -m'
+alias gsw='git switch -'
 
 #aliases gh
 alias ghpr='gh pr create'
