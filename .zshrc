@@ -108,7 +108,8 @@ alias yl="yarn lint"
 alias ylf="yarn lint:fix"
 alias yf="yarn format"
 alias yff="yarn format:fix"
-alias ylff="yarn lint:fix && yarn format:fix"
+# biome fast
+alias ylff="cd /Users/antooni/repos/l2beat && yarn lint:fix && yarn format:fix && cd -"
 alias ys="yarn start"
 alias yd="yarn dev"
 alias ysd="yarn start:dev"
@@ -171,3 +172,14 @@ alias pgrl="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/res
 
 # aliases specific for Linux
 # alias mod="code ~/.zshrc && xdg-open https://github.com/antooni/dotfiles/blob/master/.zshrc"
+export NARGO_HOME="/Users/antooni/.nargo"
+
+export PATH="$PATH:$NARGO_HOME/bin"
+
+# pnpm
+export PNPM_HOME="/Users/antooni/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
