@@ -126,6 +126,7 @@ alias ytc="yarn typecheck"
 alias ysk="yarn storybook"
 alias ydc="yarn discover"
 alias ybd="yarn build:dependencies"
+alias ydd="ytc && yarn test --reporter dot && ylff"
 
 # aliases git
 alias prune='git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
