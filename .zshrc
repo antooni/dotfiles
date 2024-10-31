@@ -103,30 +103,30 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 
 # aliases yarn
-alias y="yarn"
-alias yl="yarn lint"
-alias ylf="yarn lint:fix"
-alias yf="yarn format"
-alias yff="yarn format:fix"
-alias ylff="yarn format:fix && yarn lint:fix"
-alias ys="yarn start"
-alias yd="yarn dev"
-alias ysd="yarn start:dev"
-alias yss="yarn start:staging"
-alias ysl="yarn start:local"
-alias ysp="yarn start:production"
-alias yb="yarn build"
-alias yt="yarn test --reporter spec"
-alias ytw="yarn test:watch --reporter spec"
-alias ytg="yarn test -g --reporter spec"
-alias ya="yarn add"
-alias yad="yarn add --dev"
-alias yr="yarn remove"
-alias ytc="yarn typecheck"
-alias ysk="yarn storybook"
-alias ydc="yarn discover"
-alias ybd="yarn build:dependencies"
-alias ydd="ytc && yarn test --reporter dot && ylff"
+alias p="pnpm"
+alias pl="pnpm lint"
+alias plf="pnpm lint:fix"
+alias pf="pnpm format"
+alias pff="pnpm format:fix"
+alias plff="pnpm format:fix && pnpm lint:fix"
+alias ps="pnpm start"
+alias pd="pnpm dev"
+alias psd="pnpm start:dev"
+alias pss="pnpm start:staging"
+alias psl="pnpm start:local"
+alias psp="pnpm start:production"
+alias pb="pnpm build"
+alias pt="pnpm test --reporter spec"
+alias ptw="pnpm test:watch --reporter spec"
+alias ptg="pnpm test -g --reporter spec"
+alias pa="pnpm add"
+alias pad="pnpm add --dev"
+alias pr="pnpm remove"
+alias ptc="pnpm typecheck"
+alias psk="pnpm storybook"
+alias pdc="pnpm discover"
+alias pbd="pnpm build:dependencies"
+alias pdd="ytc && pnpm test --reporter dot && ylff"
 
 # aliases git
 alias prune='git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
@@ -148,6 +148,8 @@ alias gsw='git switch -'
 #aliases gh
 alias ghpr='gh pr create'
 
+alias lg='lazygit'
+
 #dotfiles
 alias config-dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export PATH="$PATH:/home/antonipawlak/.protostar/dist/protostar"
@@ -163,8 +165,8 @@ source /Users/antooni/.docker/init-zsh.sh || true # Added by Docker Desktop
 export PATH="$PATH:/Users/antooni/.foundry/bin"
 
 # aliases specific for my current MacOS setup
-alias yche="git pull && cd /Users/antooni/repos/l2beat && yarn checkout && cd -"
-alias ybd="cd /Users/antooni/repos/l2beat && yarn build:dependencies && cd -"
+alias pche="git pull && cd /Users/antooni/repos/l2beat && yarn checkout && cd -"
+alias pbd="cd /Users/antooni/repos/l2beat && yarn build:dependencies && cd -"
 alias mod="code ~/.zshrc && open https://github.com/antooni/dotfiles/blob/master/.zshrc"
 alias pgrt="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/reset_test.sql"
 alias pgrl="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/reset_local.sql"
