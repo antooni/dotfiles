@@ -1,7 +1,9 @@
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# prompt styling
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%b '
+setopt PROMPT_SUBST
+PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f> '
 
 # aliases yarn
 alias p="pnpm"
@@ -47,14 +49,11 @@ alias gitcm='git commit -m'
 alias gsw='git switch -'
 
 alias lg='lazygit'
-
-alias pbd="cd /Users/antooni/repos/l2beat && yarn build:dependencies && cd -"
 alias mod="code ~/.zshrc && open https://github.com/antooni/dotfiles/blob/master/.zshrc"
 alias pgrt="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/reset_test.sql"
 alias pgrl="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/reset_local.sql"
 
-autoload -Uz vcs_info
-precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%b '
-setopt PROMPT_SUBST
-PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f> '
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
