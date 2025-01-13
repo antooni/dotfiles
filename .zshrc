@@ -49,7 +49,7 @@ alias gitcm='git commit -m'
 alias gsw='git switch -'
 
 alias lg='lazygit'
-alias mod="code ~/.zshrc && open https://github.com/antooni/dotfiles/blob/master/.zshrc"
+alias mod="zed ~/.zshrc && open https://github.com/antooni/dotfiles/blob/master/.zshrc"
 alias pgrt="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/reset_test.sql"
 alias pgrl="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/reset_local.sql"
 
