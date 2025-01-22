@@ -1,9 +1,21 @@
-# prompt styling
+# STYLING
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f> '
+
+# ADVANCED HISTORY ON ARROW UP
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+setopt SHARE_HISTORY
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
 
 # aliases yarn
 alias p="pnpm"
@@ -56,4 +68,3 @@ alias pgrl="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/res
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
