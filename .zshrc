@@ -42,7 +42,7 @@ alias psk="pnpm storybook"
 alias pdc="pnpm discover"
 alias pbd="pnpm build:dependencies"
 alias pdd="ytc && pnpm test --reporter dot && ylff"
-
+alias pci="git checkout main && git pull && git switch - && cd \$(git rev-parse --show-toplevel) && plff && p i && ptc && cd -"
 # aliases git
 alias prune='git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
 alias g="git"
@@ -68,3 +68,4 @@ alias pgrl="psql -h localhost -U postgres -f /Users/antooni/repos/db/scripts/res
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
