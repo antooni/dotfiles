@@ -7,18 +7,116 @@
 // custom settings, run zed: open default settings from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-	"assistant": {
-		"default_model": {
-			"provider": "ollama",
-			"model": "llama3.2:latest"
+	"indent_guides": {
+		"background_coloring": "disabled",
+		"line_width": 1,
+		"enabled": false
+	},
+	"auto_indent_on_paste": false,
+	"auto_indent": false,
+	"scrollbar": {
+		"search_results": true
+	},
+	"collaboration_panel": {
+		"button": false
+	},
+	"notification_panel": {
+		"button": false
+	},
+	"git_panel": {
+		"button": false
+	},
+	"outline_panel": {
+		"button": false
+	},
+	"preview_tabs": {
+		"enabled": false
+	},
+	"tabs": {
+		"file_icons": false,
+		"git_status": true
+	},
+	"title_bar": {
+		"show_menus": false,
+		"show_sign_in": true,
+		"show_user_picture": false,
+		"show_project_items": false,
+		"show_branch_name": true,
+		"show_branch_icon": true
+	},
+	"debugger": {
+		"button": false
+	},
+	"diagnostics": {
+		"button": false
+	},
+	"terminal": {
+		"button": false
+	},
+	"status_bar": {
+		"cursor_position_button": false,
+		"active_language_button": false
+	},
+	"file_finder": {
+		"git_status": true,
+		"file_icons": true
+	},
+	"tab_size": 2,
+	"toolbar": {
+		"code_actions": false,
+		"selections_menu": false,
+		"quick_actions": false,
+		"breadcrumbs": true
+	},
+	"gutter": {
+		"runnables": true
+	},
+	"snippet_sort_order": "top",
+	"confirm_quit": true,
+	"close_on_file_delete": false,
+	"search": {
+		"button": false,
+		"include_ignored": false
+	},
+	"languages": {
+		"TypeScript": {
+			"show_edit_predictions": false
 		},
-		"version": "2"
+		"Markdown": {
+			"show_edit_predictions": false
+		}
+	},
+	"features": {
+		"edit_prediction_provider": "zed"
+	},
+	"global_lsp_settings": {
+		"button": false
+	},
+	"edit_predictions": { "mode": "subtle" },
+	"show_edit_predictions": false,
+	"icon_theme": "Material Icon Theme",
+	"agent": {
+		"button": true,
+		"default_profile": "write",
+		"dock": "left",
+		"always_allow_tool_actions": true,
+		"default_model": {
+			"provider": "zed.dev",
+			"model": "claude-sonnet-4"
+		}
 	},
 	"project_panel": {
-		"dock": "right"
+		"button": true,
+		"default_width": 250.0,
+		"hide_root": true,
+		"sticky_scroll": false,
+		"auto_fold_dirs": false,
+		"entry_spacing": "standard",
+		"dock": "right",
+		"indent_size": 6
 	},
 	"ui_font_size": 16,
-	"buffer_font_size": 16,
+	"buffer_font_size": 16.0,
 	"theme": {
 		"mode": "dark",
 		"light": "One Dark",
@@ -32,8 +130,7 @@
 	"autosave": "on_focus_change",
 	"private_files": [],
 	"file_scan_exclusions": [
-		".git",
-		".gitignore",
+		".git/",
 		"/.svn",
 		"/.hg",
 		"/CVS",
@@ -43,7 +140,7 @@
 		"/.settings",
 		"node_modules",
 		"/dist",
-		"/build",
+		"*/build",
 		"/cache",
 		".parcel-cache",
 		".turbo",
@@ -57,8 +154,15 @@
 		".l2b",
 		".nvmrc",
 		"docker",
-		"*.mocharc*"
+		".DS_Store",
+		// "Dockerfile.*",
+		"heroku.yml",
+		"LICENSE",
+		".discovery.json",
+		"CONTRIBUTING.md"
+		// "*.mocharc*"
 	],
+	"file_scan_inclusions": ["*.env*"],
 	"format_on_save": "on",
 	"formatter": {
 		"language_server": {
@@ -71,5 +175,10 @@
 	},
 	"experimental.theme_overrides": {
 		"terminal.background": "#353935"
+	},
+	"tab_bar": {
+		"show_nav_history_buttons": false,
+  "show": true,
+		"show_tab_bar_buttons": true
 	}
 }
