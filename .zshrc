@@ -42,7 +42,7 @@ alias psk="pnpm storybook"
 alias pdc="pnpm discover"
 alias pbd="pnpm build:dependencies"
 alias pdd="ytc && pnpm test --reporter dot && ylff"
-alias pci="git checkout main && git pull && git switch - && cd \$(git rev-parse --show-toplevel) && plff && p i && ptc && cd -"
+alias pci="git checkout main && git pull && git switch - && cd \$(git rev-parse --show-toplevel) && plff && p i && ptc && pt && cd -"
 # aliases git
 alias prune='git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
 alias g="git"
